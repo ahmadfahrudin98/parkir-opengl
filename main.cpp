@@ -131,3 +131,19 @@ glBegin(GL_LINES);
  glVertex3f(-1.2,-.28,0.7);//r
  glVertex3f(-1.2,-.28,-0.7);//r'
 glEnd();
+ 
+ / top filling
+glBegin(GL_POLYGON);
+ glVertex3f(-0.1,0.6,0.7);//o
+ glVertex3f(-0.1,0.6,-0.7);//o'
+ glVertex3f(-1.02,0.6,-0.7);//p'
+ glVertex3f(-1.02,0.6,0.7);//p
+glEnd();
+
+
+glBegin(GL_POLYGON);
+ glVertex3f(-0.1,0.6,0.7);//o
+ glVertex3f(-0.1,0.6,-0.7);//o'
+ glVertex3f(.52,0.56,-0.7);//n'
+ glVertex3f(.52,0.56,0.7);//n
+glEnd();
