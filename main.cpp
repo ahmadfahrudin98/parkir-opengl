@@ -393,3 +393,141 @@ glutSolidTorus(0.2f, .2f, 10, 25);
 
 glTranslatef(0.0,0.0,1.40);
 glRotatef(270.0,0.0,1.0,0.0);
+ 
+ //bottom filling
+glBegin(GL_POLYGON);
+glColor3f(0.25,0.25,0.25);
+ glVertex3f(-0.3,-.48,0.7);//e
+ glVertex3f(-0.3,-.48,-0.7);//e'
+ glVertex3f(.81,-0.48,-0.7);//f'
+ glVertex3f(.81,-0.48,0.7);//f
+glEnd();
+
+
+
+
+glBegin(GL_POLYGON);
+ glVertex3f(-.42,-.2,0.7);//d
+ glVertex3f(-.42,-.2,-0.7);//d'
+ glVertex3f(-0.3,-.48,-0.7);//e'
+ glVertex3f(-0.3,-.48,0.7);//e
+glEnd();
+
+glBegin(GL_POLYGON);
+
+glVertex3f(-1.2,-.28,0.7);//r
+glVertex3f(-1.2,-.28,-0.7);//r'
+glVertex3f(-1.12,-.48,-0.7);//a'
+glVertex3f(-1.12,-.48,0.7);//a
+
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(-1.12,-.48,0.7);//a
+ glVertex3f(-1.12,-.48,-0.7);//a'
+ glVertex3f(-0.86,-.48,-0.7);//b'
+ glVertex3f(-0.86,-.48,0.7);//b
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(-0.86,-.48,0.7);//b
+ glVertex3f(-0.86,-.48,-0.7);//b'
+ glVertex3f(-.74,-0.2,-0.7);//c'
+ glVertex3f(-.74,-0.2,0.7);//c
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(-.74,-0.2,0.7);//c
+ glVertex3f(-.74,-0.2,-0.7);//c'
+ glVertex3f(-.42,-.2,-0.7);//d'
+ glVertex3f(-.42,-.2,0.7);//d
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(.81,-0.48,0.7);//f
+ glVertex3f(.81,-0.48,-0.7);//f'
+ glVertex3f(.94,-0.2,-0.7);//g'
+ glVertex3f(.94,-0.2,0.7);//g
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(.94,-0.2,0.7);//g
+ glVertex3f(.94,-0.2,-0.7);//g'
+ glVertex3f(1.24,-.2,-0.7);//h'
+ glVertex3f(1.24,-.2,0.7);//h
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(1.24,-.2,0.7);//h
+ glVertex3f(1.24,-.2,-0.7);//h'
+ glVertex3f(1.38,-.48,-0.7);//i'
+ glVertex3f(1.38,-.48,0.7);//i
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(1.38,-.48,0.7);//i
+ glVertex3f(1.38,-.48,-0.7);//i'
+ glVertex3f(1.52,-.44,-0.7);//j'
+ glVertex3f(1.52,-.44,0.7);//j
+glEnd();
+
+
+
+
+//********************************************************************************************8
+
+
+// door outline- rear, front
+glBegin(GL_LINE_LOOP);
+glColor3f(1.0,1.0,1.0);
+glVertex3f(-0.5,0.22,0.7);//hh
+glVertex3f(0.0,0.22,0.7);//gg
+glVertex3f(0.0,-0.2,0.7);//oo
+glVertex3f(-0.5,-0.2,0.7);//pp
+
+
+glEnd();
+
+
+
+// door2 outline- near, driver
+
+glBegin(GL_LINE_LOOP);
+
+glVertex3f(0.12,0.22,0.7);//ll
+glVertex3f(0.62,0.22,0.7);//kk
+glVertex3f(0.62,-0.2,0.7);//mm
+glVertex3f(0.12,-0.2,0.7);//nn
+glEnd();
+
+
+glColor3f(0.0,0.0,0.0);
+// door2  outline- far, driver
+
+glBegin(GL_LINE_LOOP);
+
+glVertex3f(0.12,0.22,-0.7);//ll'
+glVertex3f(0.62,0.22,-0.7);//kk'
+glVertex3f(0.62,-0.2,-0.7);//mm'
+glVertex3f(0.12,-0.2,-0.7);//nn'
+glEnd();
+
+// door outline- rear, far
+glBegin(GL_LINE_LOOP);
+
+glVertex3f(-0.5,0.22,-0.7);//hh'
+glVertex3f(0.0,0.22,-0.7);//gg'
+glVertex3f(0.0,-0.2,-0.7);//oo'
+glVertex3f(-0.5,-0.2,-0.7);//pp'
+
+
+glEnd();
+glBegin(GL_POLYGON);//front**
+glVertex3f(1.52,.14,0.7);//k
+glVertex3f(1.52,.14,-0.7);//k'
+glVertex3f(1.52,-.44,-0.7);//j'
+glVertex3f(1.52,-.44,0.7);//j
+
+glEnd();
+
+glColor3f(0.0,0.0,1.0);
