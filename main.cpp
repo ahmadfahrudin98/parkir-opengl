@@ -531,3 +531,98 @@ glVertex3f(1.52,-.44,0.7);//j
 glEnd();
 
 glColor3f(0.0,0.0,1.0);
+ 
+ / transparent objects are placed next ..
+
+ glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//TRANCPARENCY3
+
+//windscreen
+ glBegin(GL_POLYGON);
+glColor4f(0.0,0.0,0.0,0.7);   //COLOR =WHITE TRANSPARENT
+ glVertex3f(0.562,.5,.6);//AAA
+ glVertex3f(.562,.5,-.6);//AAA'
+ glVertex3f(.76,.22,-.6);//MMM'
+ glVertex3f(.76,.22,.6);//MMM
+
+glEnd();
+//rear window
+glBegin(GL_POLYGON);
+   //COLOR =WHITE TRANSPARENT
+
+ glVertex3f(-1.068,0.5,0.6);//pp
+ glVertex3f(-1.068,0.5,-0.6);//pp'
+ glVertex3f(-1.2,0.22,-0.6);//qq'
+ glVertex3f(-1.2,0.22,0.6);//qq
+
+glEnd();
+//leftmost window front
+glBegin(GL_POLYGON);
+ glVertex3f(-0.98,0.5,0.7);//aa
+ glVertex3f(-0.64,0.5,0.7);//bb
+ glVertex3f(-0.64,0.22,0.7);//cc
+ glVertex3f(-1.08,0.22,0.7);//dd
+glEnd();
+
+//leftmost window back
+glBegin(GL_POLYGON);
+
+ glVertex3f(-0.98,0.5,-0.7);//aa
+ glVertex3f(-0.64,0.5,-0.7);//bb
+ glVertex3f(-0.64,0.22,-0.7);//cc
+ glVertex3f(-1.08,0.22,-0.7);//dd
+glEnd();
+
+//middle window front
+
+glBegin(GL_POLYGON);
+
+glVertex3f(-0.5,0.5,0.7);
+glVertex3f(0.0,0.5,0.7);
+glVertex3f(0.0,0.22,0.7);
+glVertex3f(-0.5,0.22,0.7);
+
+glEnd();
+
+
+
+
+//middle window back
+
+glBegin(GL_POLYGON);
+
+glVertex3f(-0.5,0.5,-0.7);
+glVertex3f(0.0,0.5,-0.7);
+glVertex3f(0.0,0.22,-0.7);
+glVertex3f(-0.5,0.22,-0.7);
+
+glEnd();
+//rightmost window front
+
+glBegin(GL_POLYGON);
+
+glVertex3f(0.12,0.5,0.7);//ii
+glVertex3f(0.44,0.5,0.7);//jj
+glVertex3f(0.62,0.22,0.7);//kk
+glVertex3f(0.12,0.22,0.7);//ll
+
+
+glEnd();
+
+
+//rightmost window back
+
+glBegin(GL_POLYGON);
+
+glVertex3f(0.12,0.5,-0.7);//ii'
+glVertex3f(0.44,0.5,-0.7);//jj'
+glVertex3f(0.62,0.22,-0.7);//kk'
+glVertex3f(0.12,0.22,-0.7);//ll'
+
+
+glEnd();
+
+
+////car code ends here
+glColor3f(0.0,0.0,1.0);
+
+}
