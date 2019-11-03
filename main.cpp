@@ -147,3 +147,187 @@ glBegin(GL_POLYGON);
  glVertex3f(.52,0.56,-0.7);//n'
  glVertex3f(.52,0.56,0.7);//n
 glEnd();
+ 
+ //back filling
+glBegin(GL_POLYGON);
+ glVertex3f(-1.2,0.22,0.7);//q
+ glVertex3f(-1.2,0.22,-0.7);//q'
+ glVertex3f(-1.2,-.28,-0.7);//r'
+ glVertex3f(-1.2,-.28,0.7);//r
+glEnd();
+
+
+
+
+
+
+glBegin(GL_POLYGON);
+ glVertex3f(1.52,.14,0.7);//k
+ glVertex3f(1.14,0.22,0.7);//l
+ glVertex3f(1.14,0.22,-0.7);//l'
+ glVertex3f(1.52,.14,-0.7);//k'
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(0.76,.22,0.7);//m
+ glVertex3f(0.76,.22,-0.7);//m'
+ glVertex3f(1.14,0.22,-0.7);//l'
+ glVertex3f(1.14,0.22,0.7);//l
+glEnd();
+
+glBegin(GL_POLYGON);
+ glVertex3f(-1.12,-.48,0.7);//a
+ glVertex3f(-0.86,-.48,0.7);//b
+ glVertex3f(-.74,-0.2,0.7);//c
+ glVertex3f(-0.64,0.22,0.7);//cc
+ glVertex3f(-1.08,0.22,0.7);//dd
+ glVertex3f(-1.2,0.22,0.7);//q
+ glVertex3f(-1.2,-.28,0.7);//r
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-.74,-0.2,0.7);//c
+glVertex3f(-0.64,0.22,0.7);//cc
+glVertex3f(-0.5,0.22,0.7);//hh
+glVertex3f(-0.5,-0.2,0.7);//pp
+glEnd();
+glBegin(GL_POLYGON);
+glVertex3f(0.0,0.22,0.7);//gg
+glVertex3f(1.14,0.22,0.7);//l
+glVertex3f(1.24,-.2,0.7);//h
+glVertex3f(0.0,-0.2,0.7);//oo
+
+
+
+glEnd();
+//
+glBegin(GL_POLYGON);
+
+ glVertex3f(-1.12,-.48,-0.7);//a'
+ glVertex3f(-0.86,-.48,-0.7);//b'
+ glVertex3f(-.74,-0.2,-0.7);//c'
+ glVertex3f(-0.64,0.22,-0.7);//cc'
+ glVertex3f(-1.08,0.22,-0.7);//dd'
+ glVertex3f(-1.2,0.22,-0.7);//q'
+ glVertex3f(-1.2,-.28,-0.7);//r'
+glEnd();
+
+glBegin(GL_POLYGON);
+
+glVertex3f(-.74,-0.2,-0.7);//c'
+glVertex3f(-0.64,0.22,-0.7);//cc'
+glVertex3f(-0.5,0.22,-0.7);//hh'
+glVertex3f(-0.5,-0.2,-0.7);//pp'
+
+glEnd();
+glBegin(GL_POLYGON);
+glVertex3f(0.0,0.22,-0.7);//gg'
+glVertex3f(1.14,0.22,-0.7);//l'
+glVertex3f(1.24,-.2,-0.7);//h'
+glVertex3f(0.0,-0.2,-0.7);//oo'
+
+glEnd();
+
+
+glBegin(GL_POLYGON);
+glVertex3f(-1.2,0.22,0.7);//q
+glVertex3f(-1.08,0.22,0.7);//dd
+glVertex3f(-0.98,0.5,0.7);//aa
+glVertex3f(-1.02,0.6,0.7);//p
+glEnd();
+
+
+glBegin(GL_POLYGON);
+glVertex3f(-1.02,0.6,0.7);//p
+glVertex3f(-0.98,0.5,0.7);//aa
+glVertex3f(0.44,0.5,0.7);//jj
+glVertex3f(.52,0.56,0.7);//n
+glVertex3f(-0.1,0.6,0.7);//0
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-0.64,0.5,0.7);//bb
+glVertex3f(-0.64,0.22,0.7);//cc
+glVertex3f(-0.5,0.22,0.7);//hh
+glVertex3f(-0.5,0.5,0.7);//ee
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(0.0,0.5,0.7);//ff
+glVertex3f(0.0,0.22,0.7);//gg
+glVertex3f(0.12,0.22,0.7);//ll
+glVertex3f(0.12,0.5,0.7);//ii
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(.52,0.56,0.7);//n
+glVertex3f(0.44,0.5,0.7);//jj
+glVertex3f(0.62,0.22,0.7);//kk
+glVertex3f(0.76,.22,0.7);//m
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-.42,-.2,0.7);//d
+glVertex3f(.94,-0.2,0.7);//g
+glVertex3f(.81,-0.48,0.7);//f
+glVertex3f(-0.3,-.48,0.7);//e
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(1.14,0.22,0.7);//l
+glVertex3f(1.52,.14,0.7);//k
+glVertex3f(1.52,-.44,0.7);//j
+glVertex3f(1.38,-.48,0.7);//i
+glVertex3f(1.24,-.2,0.7);//h
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-1.2,0.22,-0.7);//q'
+glVertex3f(-1.08,0.22,-0.7);//dd'
+glVertex3f(-0.98,0.5,-0.7);//aa'
+glVertex3f(-1.02,0.6,-0.7);//p'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-1.02,0.6,-0.7);//p'
+glVertex3f(-0.98,0.5,-0.7);//aa'
+glVertex3f(0.44,0.5,-0.7);//jj'
+glVertex3f(.52,0.56,-0.7);//n'
+glVertex3f(-0.1,0.6,-0.7);//0'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-0.64,0.5,-0.7);//bb'
+glVertex3f(-0.64,0.22,-0.7);//cc'
+glVertex3f(-0.5,0.22,-0.7);//hh'
+glVertex3f(-0.5,0.5,-0.7);//ee'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(0.0,0.5,-0.7);//ff'
+glVertex3f(0.0,0.22,-0.7);//gg'
+glVertex3f(0.12,0.22,-0.7);//ll'
+glVertex3f(0.12,0.5,-0.7);//ii'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(.52,0.56,-0.7);//n'
+glVertex3f(0.44,0.5,-0.7);//jj'
+glVertex3f(0.62,0.22,-0.7);//kk'
+glVertex3f(0.76,.22,-0.7);//m'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(-.42,-.2,-0.7);//d'
+glVertex3f(.94,-0.2,-0.7);//g'
+glVertex3f(.81,-0.48,-0.7);//f'
+glVertex3f(-0.3,-.48,-0.7);//e'
+glEnd();
+
+glBegin(GL_POLYGON);
+glVertex3f(1.14,0.22,-0.7);//l'
+glVertex3f(1.52,.14,-0.7);//k'
+glVertex3f(1.52,-.44,-0.7);//j'
+glVertex3f(1.38,-.48,-0.7);//i'
+glVertex3f(1.24,-.2,-0.7);//h'
+glEnd();
