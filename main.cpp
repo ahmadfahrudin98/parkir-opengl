@@ -331,3 +331,65 @@ glVertex3f(1.52,-.44,-0.7);//j'
 glVertex3f(1.38,-.48,-0.7);//i'
 glVertex3f(1.24,-.2,-0.7);//h'
 glEnd();
+ 
+ // door1 body- rear, near
+glBegin(GL_POLYGON);
+glVertex3f(-0.5,0.22,0.7);//hh
+glVertex3f(0.0,0.22,0.7);//gg
+glVertex3f(0.0,-0.2,0.7);//oo
+glVertex3f(-0.5,-0.2,0.7);//pp
+glEnd();
+
+// door body- rear, far
+glBegin(GL_POLYGON);
+glVertex3f(-0.5,0.22,-0.7);//hh'
+glVertex3f(0.0,0.22,-0.7);//gg'
+glVertex3f(0.0,-0.2,-0.7);//oo'
+glVertex3f(-0.5,-0.2,-0.7);//pp'
+glEnd();
+
+// door2  body- near, driver
+
+glBegin(GL_POLYGON);
+glVertex3f(0.12,0.22,0.7);//ll
+glVertex3f(0.62,0.22,0.7);//kk
+glVertex3f(0.62,-0.2,0.7);//mm
+glVertex3f(0.12,-0.2,0.7);//nn
+glEnd();
+
+
+
+// door2  body- far, driver
+
+glBegin(GL_POLYGON);
+ glVertex3f(0.12,0.22,-0.7);//ll'
+glVertex3f(0.62,0.22,-0.7);//kk'
+glVertex3f(0.62,-0.2,-0.7);//mm'
+glVertex3f(0.12,-0.2,-0.7);//nn'
+glEnd();
+
+glBegin(GL_POLYGON);//front**
+ glVertex3f(1.52,.14,0.7);//k
+ glVertex3f(1.52,.14,-0.7);//k'
+ glVertex3f(1.52,-.44,-0.7);//j'
+ glVertex3f(1.52,-.44,0.7);//j
+glEnd();
+
+glTranslatef(-.58,-.52,0.7);//translate to 1st tyre
+glColor3f(0.09,0.09,0.09);// tyre color********
+glutSolidTorus(0.12f, .14f, 10, 25);
+glTranslatef(1.68,0.0,0.0);//translate to 2nd tyre
+glutSolidTorus(0.12f, .14f, 10, 25);
+
+glTranslatef(0.0,0.0,-1.4);//translate to 3rd tyre
+glutSolidTorus(0.12f, .14f, 10, 25);
+glTranslatef(-1.68,0.0,0.0);//translate to 4th tyre which is behind 1st tyre i.e rear .back
+glutSolidTorus(0.12f, .14f, 10, 25);
+glTranslatef(.58,.52,0.7);//translate to origin
+glRotatef(90.0,0.0,1.0,0.0);
+glTranslatef(0.0,0.0,-1.40);
+
+glutSolidTorus(0.2f, .2f, 10, 25);
+
+glTranslatef(0.0,0.0,1.40);
+glRotatef(270.0,0.0,1.0,0.0);
