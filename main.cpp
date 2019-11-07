@@ -394,9 +394,9 @@ glutSolidTorus(0.2f, .2f, 10, 25);
 glTranslatef(0.0,0.0,1.40);
 glRotatef(270.0,0.0,1.0,0.0);
  
- //bottom filling
+ //bagian bawah 
 glBegin(GL_POLYGON);
-glColor3f(0.25,0.25,0.25);
+glColor3f(0.50,0.75,0.50); //warna bagian bawah
  glVertex3f(-0.3,-.48,0.7);//e
  glVertex3f(-0.3,-.48,-0.7);//e'
  glVertex3f(.81,-0.48,-0.7);//f'
