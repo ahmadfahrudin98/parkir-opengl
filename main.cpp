@@ -131,8 +131,8 @@ glBegin(GL_LINES);
  glVertex3f(-1.2,-.28,0.7);//r
  glVertex3f(-1.2,-.28,-0.7);//r'
 glEnd();
- 
- / top filling
+
+ //top filling
 glBegin(GL_POLYGON);
  glVertex3f(-0.1,0.6,0.7);//o
  glVertex3f(-0.1,0.6,-0.7);//o'
@@ -147,7 +147,7 @@ glBegin(GL_POLYGON);
  glVertex3f(.52,0.56,-0.7);//n'
  glVertex3f(.52,0.56,0.7);//n
 glEnd();
- 
+
  //back filling
 glBegin(GL_POLYGON);
  glVertex3f(-1.2,0.22,0.7);//q
@@ -155,11 +155,6 @@ glBegin(GL_POLYGON);
  glVertex3f(-1.2,-.28,-0.7);//r'
  glVertex3f(-1.2,-.28,0.7);//r
 glEnd();
-
-
-
-
-
 
 glBegin(GL_POLYGON);
  glVertex3f(1.52,.14,0.7);//k
@@ -196,8 +191,6 @@ glVertex3f(0.0,0.22,0.7);//gg
 glVertex3f(1.14,0.22,0.7);//l
 glVertex3f(1.24,-.2,0.7);//h
 glVertex3f(0.0,-0.2,0.7);//oo
-
-
 
 glEnd();
 //
@@ -331,7 +324,7 @@ glVertex3f(1.52,-.44,-0.7);//j'
 glVertex3f(1.38,-.48,-0.7);//i'
 glVertex3f(1.24,-.2,-0.7);//h'
 glEnd();
- 
+
  // door1 body- rear, near
 glBegin(GL_POLYGON);
 glVertex3f(-0.5,0.22,0.7);//hh
@@ -356,7 +349,6 @@ glVertex3f(0.62,0.22,0.7);//kk
 glVertex3f(0.62,-0.2,0.7);//mm
 glVertex3f(0.12,-0.2,0.7);//nn
 glEnd();
-
 
 
 // door2  body- far, driver
@@ -393,8 +385,8 @@ glutSolidTorus(0.2f, .2f, 10, 25);
 
 glTranslatef(0.0,0.0,1.40);
 glRotatef(270.0,0.0,1.0,0.0);
- 
- //bagian bawah 
+
+ //bagian bawah
 glBegin(GL_POLYGON);
 glColor3f(0.50,0.75,0.50); //warna bagian bawah
  glVertex3f(-0.3,-.48,0.7);//e
@@ -402,8 +394,6 @@ glColor3f(0.50,0.75,0.50); //warna bagian bawah
  glVertex3f(.81,-0.48,-0.7);//f'
  glVertex3f(.81,-0.48,0.7);//f
 glEnd();
-
-
 
 
 glBegin(GL_POLYGON);
@@ -472,8 +462,6 @@ glBegin(GL_POLYGON);
 glEnd();
 
 
-
-
 //********************************************************************************************8
 
 
@@ -531,8 +519,8 @@ glVertex3f(1.52,-.44,0.7);//j
 glEnd();
 
 glColor3f(0.0,0.0,1.0);
- 
- / transparent objects are placed next ..
+
+ //transparent objects are placed next ..
 
  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//TRANCPARENCY3
 
@@ -582,8 +570,6 @@ glVertex3f(0.0,0.22,0.7);
 glVertex3f(-0.5,0.22,0.7);
 
 glEnd();
-
-
 
 
 //middle window back
@@ -735,9 +721,6 @@ void drawhouse()
     glEnd();
 
 
-
-
-
    glBegin(GL_TRIANGLES);
 glVertex3f(0,1.95,2.5);//p
       glVertex3f(3.04,0.84,2.5);//w
@@ -823,8 +806,6 @@ void initScene()
  house_display_list= createDL2();//***********
 
 }
-
-
 
 
 
@@ -1054,8 +1035,6 @@ void menu()
 {
  int control;
     int control1;
-
-
 
  control= glutCreateMenu(ProcessMenu);
  glutAddMenuEntry("**CONTROLS**",1);
