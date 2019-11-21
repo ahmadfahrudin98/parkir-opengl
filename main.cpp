@@ -132,7 +132,7 @@ glBegin(GL_LINES);
  glVertex3f(-1.2,-.28,-0.7);//r'
 glEnd();
 
- //top filling
+ // top filling
 glBegin(GL_POLYGON);
  glVertex3f(-0.1,0.6,0.7);//o
  glVertex3f(-0.1,0.6,-0.7);//o'
@@ -155,6 +155,11 @@ glBegin(GL_POLYGON);
  glVertex3f(-1.2,-.28,-0.7);//r'
  glVertex3f(-1.2,-.28,0.7);//r
 glEnd();
+
+
+
+
+
 
 glBegin(GL_POLYGON);
  glVertex3f(1.52,.14,0.7);//k
@@ -191,6 +196,8 @@ glVertex3f(0.0,0.22,0.7);//gg
 glVertex3f(1.14,0.22,0.7);//l
 glVertex3f(1.24,-.2,0.7);//h
 glVertex3f(0.0,-0.2,0.7);//oo
+
+
 
 glEnd();
 //
@@ -351,6 +358,7 @@ glVertex3f(0.12,-0.2,0.7);//nn
 glEnd();
 
 
+
 // door2  body- far, driver
 
 glBegin(GL_POLYGON);
@@ -368,7 +376,7 @@ glBegin(GL_POLYGON);//front**
 glEnd();
 
 glTranslatef(-.58,-.52,0.7);//translate to 1st tyre
-glColor3f(0.09,0.09,0.09);// tyre color********
+glColor3f(0.09,0.09,0.09);// warna bagian ban
 glutSolidTorus(0.12f, .14f, 10, 25);
 glTranslatef(1.68,0.0,0.0);//translate to 2nd tyre
 glutSolidTorus(0.12f, .14f, 10, 25);
@@ -386,7 +394,7 @@ glutSolidTorus(0.2f, .2f, 10, 25);
 glTranslatef(0.0,0.0,1.40);
 glRotatef(270.0,0.0,1.0,0.0);
 
- //bagian bawah
+ //bottom filling
 glBegin(GL_POLYGON);
 glColor3f(0.50,0.75,0.50); //warna bagian bawah
  glVertex3f(-0.3,-.48,0.7);//e
@@ -394,6 +402,8 @@ glColor3f(0.50,0.75,0.50); //warna bagian bawah
  glVertex3f(.81,-0.48,-0.7);//f'
  glVertex3f(.81,-0.48,0.7);//f
 glEnd();
+
+
 
 
 glBegin(GL_POLYGON);
@@ -462,12 +472,14 @@ glBegin(GL_POLYGON);
 glEnd();
 
 
+
+
 //********************************************************************************************8
 
 
 // door outline- rear, front
 glBegin(GL_LINE_LOOP);
-glColor3f(1.0,1.0,1.0);
+glColor3f(1.0,1.0,1.0);//warna bagian pintu depan
 glVertex3f(-0.5,0.22,0.7);//hh
 glVertex3f(0.0,0.22,0.7);//gg
 glVertex3f(0.0,-0.2,0.7);//oo
@@ -489,7 +501,7 @@ glVertex3f(0.12,-0.2,0.7);//nn
 glEnd();
 
 
-glColor3f(0.0,0.0,0.0);
+glColor3f(1.0,1.0,1.0);//warna jendela ke 2
 // door2  outline- far, driver
 
 glBegin(GL_LINE_LOOP);
@@ -518,15 +530,15 @@ glVertex3f(1.52,-.44,0.7);//j
 
 glEnd();
 
-glColor3f(0.0,0.0,1.0);
+glColor3f(0.0,0.0,0.0);
 
- //transparent objects are placed next ..
+ // transparent objects are placed next ..
 
  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//TRANCPARENCY3
 
 //windscreen
  glBegin(GL_POLYGON);
-glColor4f(0.0,0.0,0.0,0.7);   //COLOR =WHITE TRANSPARENT
+glColor4f(0.1,0.0,0.0,0.7);   //COLOR =WHITE TRANSPARENT
  glVertex3f(0.562,.5,.6);//AAA
  glVertex3f(.562,.5,-.6);//AAA'
  glVertex3f(.76,.22,-.6);//MMM'
@@ -572,6 +584,8 @@ glVertex3f(-0.5,0.22,0.7);
 glEnd();
 
 
+
+
 //middle window back
 
 glBegin(GL_POLYGON);
@@ -609,7 +623,7 @@ glEnd();
 
 
 ////car code ends here
-glColor3f(0.0,0.0,1.0);
+glColor3f(0.0,0.0,0.0);
 
 }
 
@@ -672,7 +686,7 @@ void drawhouse()
 
 
     glEnd();
-    glColor3ub(255,185,1);//*************
+    glColor3ub(25,185,1);//*************
 
     glBegin(GL_QUADS);
         glVertex3f(-2.6,-.84,2.5);//m
@@ -721,6 +735,9 @@ void drawhouse()
     glEnd();
 
 
+
+
+
    glBegin(GL_TRIANGLES);
 glVertex3f(0,1.95,2.5);//p
       glVertex3f(3.04,0.84,2.5);//w
@@ -730,7 +747,7 @@ glVertex3f(0,1.95,2.5);//p
          glVertex3f(-3.04,0.84,-2.5);//o'
 
 glEnd();
-  glColor3ub(255,102,0);//***********top color
+  glColor3ub(25,102,0);//***********top color
 
     glBegin(GL_QUADS);
 
@@ -809,6 +826,8 @@ void initScene()
 
 
 
+
+
 void renderScene(void)
 {
  int i,j;
@@ -827,8 +846,8 @@ void renderScene(void)
 
 // Draw 36 car
 
- for( i = 2; i < 4; i++)//kolom
-  for( j=2; j < 4; j++) //baris
+ for( i = -2; i < 3; i++)//kolom
+  for( j=-2; j < 4; j++) //baris
   {
    glPushMatrix();
    glTranslatef((i)*10.0,0,(j) * 10.0);
@@ -840,40 +859,14 @@ void renderScene(void)
  {
  glPushMatrix();
    glScalef(2.0,2.0,2.0);
-   glTranslatef(0.0,.85,-20.0);
+   glTranslatef(0.0,.85,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
    glCallList(house_display_list);
-           glTranslatef(10.0,0.0,0.0);
+           glTranslatef(10.0,0.0,0.0); //angle rumah kiri depan yg ke kanan
      glCallList(house_display_list);
-          glTranslatef(-20.0,0.0,0.0);
+          glTranslatef(-20.0,0.0,0.0); //angle rumah hadap  depan yg ke kiri
      glCallList(house_display_list);
 
-   glRotatef(90,0.0,1.0,0.0);
-         glTranslatef(-10.0,0.0,-10.0);
-   glCallList(house_display_list);
 
-   glTranslatef(-10.0,0.0,0.0);
-   glCallList(house_display_list);
-   glTranslatef(-10.0,0.0,0.0);
-   glCallList(house_display_list);
-   glPopMatrix();
-
-  glPushMatrix();
-         glTranslatef(10.0,3.4,-80.0);
-         glScalef(4.0,4.0,4.0);
-   glCallList(house_display_list);
-   glTranslatef(-10.0,0.0,0.0);
-   glCallList(house_display_list);
-  glPopMatrix();
-
-         glPushMatrix();
-            glRotatef(90,0.0,1.0,0.0);
-    glScalef(2.0,2.0,2.0);
-    glTranslatef(0.0,0.85,15.0);
-             glCallList(house_display_list);
-    glTranslatef(10.0,0.,0.0);
-             glCallList(house_display_list);
-                  glTranslatef(-20.0,0.,0.0);
-             glCallList(house_display_list);
          glPopMatrix();
 
  }
@@ -903,7 +896,7 @@ void renderScene(void)
     glPushMatrix();
     glTranslatef(fx,0,fz);
     glRotatef(theta1,0,1,0);
-    glColor3f(0.8,0.8,0);
+    glColor3f(1.0,0.0,0.0); //bagian warna mobil yg bisa jalan
     glCallList(carr_display_list);
     glPopMatrix();
 
@@ -1036,8 +1029,10 @@ void menu()
  int control;
     int control1;
 
+
+
  control= glutCreateMenu(ProcessMenu);
- glutAddMenuEntry("**CONTROLS**",1);
+ glutAddMenuEntry("**KONTROL**",1);
  glutAddMenuEntry("1)  UP KEY:untuk arah maju.",1);
  glutAddMenuEntry("2)  DOWN KEY: untuk arah mundur.",1);
  glutAddMenuEntry("3)  LEFT KEY: untuk belok kiri.",1);
@@ -1045,12 +1040,13 @@ void menu()
  glutAddMenuEntry("5)  d: pindah ke kanan. ",1);
  glutAddMenuEntry("6)  a: pindah ke kiri.",1);
  glutAddMenuEntry("7)  s: untuk arah menjauh.",1);
- glutAddMenuEntry("8)  w:untuk arah mendekat.",1);
+ glutAddMenuEntry("8)  w: untuk arah mendekat.",1);
  glutAddMenuEntry("9)  t: untuk arah dari atas.",1);
  glutAddMenuEntry("10) q: keluar.",1);
  glutAttachMenu(GLUT_RIGHT_BUTTON);
     control1=glutCreateMenu(ProcessMenu1);
 
+ glutAddMenuEntry("MENUJU RUMAH",1);
  glutAddMenuEntry("MEMINDAHKAN MOBIL",2);
  glutAttachMenu(GLUT_LEFT_BUTTON);
 
