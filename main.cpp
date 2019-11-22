@@ -156,11 +156,6 @@ glBegin(GL_POLYGON);
  glVertex3f(-1.2,-.28,0.7);//r
 glEnd();
 
-
-
-
-
-
 glBegin(GL_POLYGON);
  glVertex3f(1.52,.14,0.7);//k
  glVertex3f(1.14,0.22,0.7);//l
@@ -196,8 +191,6 @@ glVertex3f(0.0,0.22,0.7);//gg
 glVertex3f(1.14,0.22,0.7);//l
 glVertex3f(1.24,-.2,0.7);//h
 glVertex3f(0.0,-0.2,0.7);//oo
-
-
 
 glEnd();
 //
@@ -357,8 +350,6 @@ glVertex3f(0.62,-0.2,0.7);//mm
 glVertex3f(0.12,-0.2,0.7);//nn
 glEnd();
 
-
-
 // door2  body- far, driver
 
 glBegin(GL_POLYGON);
@@ -471,9 +462,6 @@ glBegin(GL_POLYGON);
  glVertex3f(1.52,-.44,0.7);//j
 glEnd();
 
-
-
-
 //********************************************************************************************8
 
 
@@ -582,9 +570,6 @@ glVertex3f(0.0,0.22,0.7);
 glVertex3f(-0.5,0.22,0.7);
 
 glEnd();
-
-
-
 
 //middle window back
 
