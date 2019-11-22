@@ -1646,8 +1646,8 @@ void menu()
  glutAttachMenu(GLUT_RIGHT_BUTTON);
     control1=glutCreateMenu(ProcessMenu1);
 
- glutAddMenuEntry("MENUJU RUMAH",1);
- glutAddMenuEntry("MEMINDAHKAN MOBIL",2);
+ glutAddMenuEntry("Pake rumah dong...",1);
+ glutAddMenuEntry("Maen mobil kuy...",2);
  glutAddMenuEntry ("Pake pohon dong...",3);
  glutAddMenuEntry ("Pake tank panzer dong...",4);
  glutAttachMenu(GLUT_LEFT_BUTTON);
