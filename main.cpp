@@ -6,9 +6,9 @@
 static float angle=0.0,ratio;
 static float x=0.0f,y=1.75f,z=5.0f;
 static float lx=0.10f,ly=0.10f,lz=-1.0f;
-static GLint carr_display_list,house_display_list, pohon_display_list, panzer_display_list;
+static GLint carr_display_list,house_display_list, pohon_display_list, panzer_display_list,awan_display_list;
 float theta=0.01,fxincr=0.1,fzincr=0,temp,theta1,fx=-10,fz=80;
-int xxxx=0,yyyy=0,kk=0,housevisible=0, pohonvisible=0,panzervisible=0,movecarvar=0;
+int xxxx=0,yyyy=0,kk=0,housevisible=0, pohonvisible=0,panzervisible=0,awanvisible=0,movecarvar=0;
 int a[36]={55,97,44,152,55,171,108,86,168,99,147,207,238,55,233,167,105,80,134,29,253,130,32,240,110,199,224,121,93,199,180,61,110,251,77,237};
 int b[36]={102,194,110,152,153,184,137,113,55,138,104,43,240,255,203,8,100,53,88,64,127,64,87,5,2,144,211,128,10,89,27,11,175,185,157,241};
 int c[36]={159,243,133,253,233,228,141,18,46,195,75,52,253,204,169,30,78,94,68,117,4,2,33,12,2,25,195,76,26,54,98,103,205,173,65,242};
@@ -60,6 +60,34 @@ void pohon()
     glPopMatrix();
 
 }
+
+void awan()
+        {
+
+         glPushMatrix();
+         glColor3f(1, 1, 1);
+          glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+         glutSolidSphere(10, 50, 50);
+         glPopMatrix();
+         glPushMatrix();
+         glTranslatef(10,0,1);
+         glutSolidSphere(5, 50, 50);
+         glPopMatrix();
+         glPushMatrix();
+         glTranslatef(-2,6,-2);
+         glutSolidSphere(7, 50, 50);
+         glPopMatrix();
+         glPushMatrix();
+         glTranslatef(-10,-3,0);
+         glutSolidSphere(7, 50, 50);
+         glPopMatrix();
+         glPushMatrix();
+         glTranslatef(6,-2,2);
+         glutSolidSphere(7, 50, 50);
+         glPopMatrix();
+
+        }
+
 
 void drawcarr()
 {
@@ -1386,6 +1414,24 @@ GLuint createDL4() {
  return(panzerDL);
 }
 
+GLuint createDL5() {
+ GLuint awanDL;
+
+ // Create the id for the list
+ awanDL = glGenLists(1);
+
+ // start list
+ glNewList(awanDL,GL_COMPILE);
+
+ // call the function that contains the rendering commands
+  awan();
+
+ // endList
+ glEndList();
+
+ return(awanDL);
+}
+
 void initScene()
 {
 
@@ -1394,6 +1440,7 @@ void initScene()
  house_display_list= createDL2();//***********
  pohon_display_list=createDL3();
  panzer_display_list=createDL4();
+ awan_display_list=createDL5();
 }
 
 
@@ -1461,6 +1508,19 @@ void renderScene(void)
      glCallList(panzer_display_list);
           glTranslatef(-20.0,0.0,0.0); //angle rumah hadap  depan yg ke kiri
      glCallList(panzer_display_list);
+         glPopMatrix();
+ }
+
+ if(awanvisible)
+ {
+ glPushMatrix();
+   glScalef(2,2,5);
+   glTranslatef(0.0,30,0.0); //angle rumah kiri depan yg ke 2 atau tengah
+   glCallList(awan_display_list);
+           glTranslatef(10.0,0.0,0.0); //angle rumah kiri depan yg ke kanan
+     glCallList(awan_display_list);
+          glTranslatef(-20.0,0.0,0.0); //angle rumah hadap  depan yg ke kiri
+     glCallList(awan_display_list);
          glPopMatrix();
  }
 
@@ -1614,6 +1674,13 @@ void ProcessMenu1(int value)
       glutPostRedisplay();
    break;
 
+   case 5:if(awanvisible==0)
+          awanvisible=1;
+   else
+   awanvisible=0;
+      glutPostRedisplay();
+   break;
+
  case 2:if(movecarvar==0)
   {
   glutSpecialFunc(movecar);
@@ -1650,6 +1717,7 @@ void menu()
  glutAddMenuEntry("Maen mobil kuy...",2);
  glutAddMenuEntry ("Pake pohon dong...",3);
  glutAddMenuEntry ("Pake tank panzer dong...",4);
+ glutAddMenuEntry ("Tambah awan...",5);
  glutAttachMenu(GLUT_LEFT_BUTTON);
 
 }
