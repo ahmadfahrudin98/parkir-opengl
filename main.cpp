@@ -1441,8 +1441,8 @@ void renderScene(void)
  if(pohonvisible)
  {
  glPushMatrix();
-   glScalef(2.0,2.0,2.0);
-   glTranslatef(0.0,.85,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
+   glScalef(2.7,2.7,2.7);
+   glTranslatef(-3,0.0,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
    glCallList(pohon_display_list);
            glTranslatef(10.0,0.0,0.0); //angle rumah kiri depan yg ke kanan
      glCallList(pohon_display_list);
@@ -1454,8 +1454,8 @@ void renderScene(void)
  if(panzervisible)
  {
  glPushMatrix();
-   glScalef(2.0,2.0,2.0);
-   glTranslatef(0.0,.85,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
+   glScalef(2,2,2);
+   glTranslatef(0.0,0.36,20.0); //angle rumah kiri depan yg ke 2 atau tengah
    glCallList(panzer_display_list);
            glTranslatef(10.0,0.0,0.0); //angle rumah kiri depan yg ke kanan
      glCallList(panzer_display_list);
