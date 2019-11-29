@@ -719,7 +719,7 @@ void drawhouse()
 
 
     glEnd();
-    glColor3ub(25,185,1);//*************
+    glColor3ub(75,83,32);//warna rumah bgian body
 
     glBegin(GL_QUADS);
         glVertex3f(-2.6,-.84,2.5);//m
@@ -777,7 +777,7 @@ glVertex3f(0,1.95,2.5);//p
          glVertex3f(-3.04,0.84,-2.5);//o'
 
 glEnd();
-  glColor3ub(25,102,0);//***********top color
+  glColor3ub(0,0,0);//warna rumah atap
 
     glBegin(GL_QUADS);
 
@@ -793,7 +793,7 @@ glEnd();
 
           glEnd();
 
-     glColor3ub(116,18,0);//*******base color
+     glColor3ub(0,0,0);//*******base color
 
     glBegin(GL_QUADS);
     glVertex3f(-2.6,-.84,2.5);//m
@@ -1474,33 +1474,43 @@ void renderScene(void)
  if(housevisible)
  {
 
- glPushMatrix();
-   glScalef(2.0,2.0,2.0);
-   glTranslatef(0.0,.85,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
-   glCallList(house_display_list);
-           glTranslatef(10.0,0.0,0.0); //angle rumah kiri depan yg ke kanan
-     glCallList(house_display_list);
-          glTranslatef(-20.0,0.0,0.0); //angle rumah hadap  depan yg ke kiri
-     glCallList(house_display_list);
-         glPopMatrix();
-
 glPushMatrix();
-         glTranslatef(10.0,3.4,-80.0); //angle rumah belakang yg kanan besar
+   glScalef(2.0,2.0,2.0);
+   glTranslatef(0.0,.85,-20.0);
+   glCallList(house_display_list);
+           glTranslatef(10.0,0.0,0.0);
+     glCallList(house_display_list);
+          glTranslatef(-20.0,0.0,0.0);
+     glCallList(house_display_list);
+
+   glRotatef(90,0.0,1.0,0.0);
+         glTranslatef(-10.0,0.0,-10.0);
+   glCallList(house_display_list);
+
+   glTranslatef(-10.0,0.0,0.0);
+   glCallList(house_display_list);
+   glTranslatef(-10.0,0.0,0.0);
+   glCallList(house_display_list);
+   glPopMatrix();
+
+  glPushMatrix();
+         glTranslatef(10.0,3.4,-80.0);
          glScalef(4.0,4.0,4.0);
    glCallList(house_display_list);
-   glTranslatef(-10.0,0.0,0.0);//angle rumah belakang yg kiri besar
+   glTranslatef(-10.0,0.0,0.0);
    glCallList(house_display_list);
   glPopMatrix();
-glPushMatrix();
+
+         glPushMatrix();
             glRotatef(90,0.0,1.0,0.0);
     glScalef(2.0,2.0,2.0);
     glTranslatef(0.0,0.85,15.0);
-             glCallList(house_display_list); //angle rumah kanan  yg ke 2
+             glCallList(house_display_list);
     glTranslatef(10.0,0.,0.0);
-             glCallList(house_display_list);//angle rumah kiri depan yg ke 3
+             glCallList(house_display_list);
                   glTranslatef(-20.0,0.,0.0);
-             glCallList(house_display_list);//angle rumah kiri depan yg ke 1
-    glPopMatrix();
+             glCallList(house_display_list);
+         glPopMatrix();
  }
 
  if(pohonvisible)
