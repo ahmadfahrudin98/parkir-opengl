@@ -1473,6 +1473,7 @@ void renderScene(void)
   }
  if(housevisible)
  {
+
  glPushMatrix();
    glScalef(2.0,2.0,2.0);
    glTranslatef(0.0,.85,-20.0); //angle rumah kiri depan yg ke 2 atau tengah
@@ -1483,6 +1484,23 @@ void renderScene(void)
      glCallList(house_display_list);
          glPopMatrix();
 
+glPushMatrix();
+         glTranslatef(10.0,3.4,-80.0); //angle rumah belakang yg kanan besar
+         glScalef(4.0,4.0,4.0);
+   glCallList(house_display_list);
+   glTranslatef(-10.0,0.0,0.0);//angle rumah belakang yg kiri besar
+   glCallList(house_display_list);
+  glPopMatrix();
+glPushMatrix();
+            glRotatef(90,0.0,1.0,0.0);
+    glScalef(2.0,2.0,2.0);
+    glTranslatef(0.0,0.85,15.0);
+             glCallList(house_display_list); //angle rumah kanan  yg ke 2
+    glTranslatef(10.0,0.,0.0);
+             glCallList(house_display_list);//angle rumah kiri depan yg ke 3
+                  glTranslatef(-20.0,0.,0.0);
+             glCallList(house_display_list);//angle rumah kiri depan yg ke 1
+    glPopMatrix();
  }
 
  if(pohonvisible)
@@ -1496,6 +1514,7 @@ void renderScene(void)
           glTranslatef(-20.0,0.0,0.0); //angle rumah hadap  depan yg ke kiri
      glCallList(pohon_display_list);
          glPopMatrix();
+
  }
 
  if(panzervisible)
